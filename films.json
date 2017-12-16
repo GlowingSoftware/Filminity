@@ -1,0 +1,35 @@
+[
+    {
+        "name": "The_Lord_of_Rings",
+        "type":"film",
+        "genre":[
+            "Adventure",
+            "Fantasy"
+        ],
+        "imdb": "tt3281796",
+        "description": "I dont remember but this film is good Kappa",
+        "imageURL":"",
+        "cdn":"localhost:7777",
+        "posterURL":"",
+        "productionYear": 2014,
+        "rating": 8.5,
+        "contentRating": 12
+
+    },
+    {
+        "name": "Game_of_Thrones",
+        "type":"series",
+        "genre":[
+            "Adventure"
+        ],
+        "category":"Summer is ending",
+        "imdb":"frfrefr",
+        "description":"yeah",
+        "posterURL":"",
+        "imageURL":"",
+        "cdn":"http://localhost:7777",
+        "productionYear":2017,
+        "rating":10,
+        "contentRating":3
+    }
+]

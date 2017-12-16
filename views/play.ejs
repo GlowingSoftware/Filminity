@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FilmIDK</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="vendor/vuejs/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/4-col-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/px-video.css" />
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="browse">FilmIDK</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Browse
+                <span class="sr-only">(current)</span>
+              </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mainContent" class="container">
+        <div id="hash">
+            <div class="px-video-container" id="vid">
+                <div class="px-video-img-captions-container">
+                    <div class="px-video-captions hide" aria-hidden="true"></div>
+                    <video id="video" width="640" height="360" controls
+                        >
+                        <source v-bind:src="link + '/content/' + hashArray[0] + '/' + hashArray[1] + '.mp4'" type="video/mp4" />
+                        <!-- <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default /> -->
+                    </video>
+                </div>
+                <div class="px-video-controls"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/strings.js"></script>
+    <script src="js/px-video.js"></script>
+    <script>
+        // Initialize
+        new InitPxVideo({
+            "videoId": "vid",
+            "captionsOnDefault": true,
+            "seekInterval": 20,
+            "videoTitle": "clips of stand-up comedy",
+            "debug": true
+        });
+        var hash;
+        var hashString = window.location.hash.slice(1);
+        var hashArray = hashString.split("-");
+        var socket = io();
+        this.socket = io.connect('http://52.214.132.81:8080');
+        socket.emit("link", hashArray[0]);
+        socket.on("thisLink", function (link) {
+            if (window.location.hash) {
+                hash = new Vue({
+                    el: '#hash',
+                    data: {
+                        hashArray,
+                        link
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>

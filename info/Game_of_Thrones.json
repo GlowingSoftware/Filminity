@@ -1,0 +1,33 @@
+{
+    "name": "Game_of_Thrones",
+    "type":"series",
+    "genre":[
+        "Adventure"
+    ],
+    "category":"Summer is ending",
+    "imdb":"frfrefr",
+    "description":"yeah",
+    "imageURL":"http://cdn1-www.superherohype.com/assets/uploads/2013/03/file_175297_0_thronesposters.jpg",
+    "posterURL":"http://cdn1-www.superherohype.com/assets/uploads/2013/03/file_175297_0_thronesposters.jpg",
+    "productionYear":2017,
+    "rating":10,
+    "contentRating":3,
+    "link": "http://173.212.197.49:8888",
+    "seasons":[
+        {
+            "id":1,
+            "chapters":[
+                {
+                    "id":1,
+                    "title":"Winter Is Coming",
+                    "description":"In the Seven Kingdoms of Westeros, a soldier of the ancient Night's Watch order survives an attack by supernatural creatures known as the White Walkers, thought until now to be myth. He rushes to Castle Winterfell, which is ruled by Eddard 'Ned' Stark, Warden of the North, who decapitates the soldier for deserting his post." 
+                },
+                {
+                    "id":2,
+                    "title":"The Kingsroad",
+                    "description":"Having accepted his new role as the Hand of the King, Ned leaves Winterfell with his daughters Sansa and Arya, while Catelyn stays behind to tend to Bran. The unconscious Bran is attacked by an assassin, but his direwolf saves him. Catelyn decides to go to King's Landing to tell Ned about the attempt and suspected Lannister involvement."
+                }
+            ]
+        }
+    ]
+}
