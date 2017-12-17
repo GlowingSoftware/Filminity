@@ -10,4 +10,4 @@ Are you planning to create a movies website? Do you want to share your own creat
 - Working with the powerful tech of NodeJS and Bootstrap
 
 ## Contribute
-Our project is in Github. You can code, improve the project and create a Pull Request. After checking your Pull Request, if all is okay, we'll merge it into the project. Note that if you are active, we will consider adding you to the team.
+Our project is on GitHub. You can code, improve the project and create a Pull Request. After checking your Pull Request, if all is okay, we'll merge it into the project. Note that if you are active, we will consider adding you to the team.
